@@ -10,9 +10,11 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - debug.patch
 
 build:
-  number: 0
+  number: 1
   script_env:
     - PROCESSOR_ARCHITEW6432
     - PROCESSOR_ARCHITECTURE

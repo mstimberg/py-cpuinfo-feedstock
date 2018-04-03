@@ -1,0 +1,14 @@
+:100644 100644 10be231... 0000000... M	cpuinfo/cpuinfo.py
+
+diff --git a/cpuinfo/cpuinfo.py b/cpuinfo/cpuinfo.py
+index 10be231..6448753 100644
+--- a/cpuinfo/cpuinfo.py
++++ b/cpuinfo/cpuinfo.py
+@@ -2157,6 +2157,7 @@ def get_cpu_info():
+ # Make sure we are running on a supported system
+ def _check_arch():
+ 	arch, bits = parse_arch(DataSource.raw_arch_string)
++	print(DataSource.raw_arch_string, arch, bits)
+ 	if not arch in ['X86_32', 'X86_64', 'ARM_7', 'ARM_8', 'PPC_64']:
+ 		raise Exception("py-cpuinfo currently only works on X86 and some PPC and ARM CPUs.")
+ 

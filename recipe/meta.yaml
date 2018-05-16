@@ -30,8 +30,8 @@ requirements:
 
 test:
   commands:
-    - python -c 'import platform; print(platform.machine())'
-    - python -c 'import platform; assert platform.machine() is not None'
+    - 'python -c "import platform; print(platform.machine())"'
+    - 'python -c "import platform; assert platform.machine() is not None"'
 
 about:
   home: https://github.com/workhorsy/py-cpuinfo
